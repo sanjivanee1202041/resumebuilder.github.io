@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.5" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Resume Generator</title>
+  </head>
+  <body style="background-image: url('my2img.jpg');">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Resume Builder Website</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="register.php">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.php">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="logout.php">Logout</a>
+          </li>
+    
+          
+         
+        </ul>
+      </div>
+    </nav>
+    <!-- here goes html code  -->
+
+    <div class="card mx-5 mt-3" id="cv-form">
+      <div class="card-header">
+        <B>
+          <MARQUEE BGCOLOR="CYAN" font-size: xx-large height="30" >WELCOME TO RESUME BUILDING WEBSITE....!!!!!</MARQUEE>
+           </B>
+        <h1 class="text-center my-2" style="font-size: 70px; font-weight: 800; color:    #044450 ;">Resume Generator</h1>
+        <p class="text-center">Effortlessly make a job-worthy resume that gets you hired faster</p>
+
+      </div>
+      <div class="card-body">
+        <div class="container" >
+        
+          <div class="row">
+            <div class="col-md-6">
+              <!-- first col -->
+              <h1>Personal Information</h1>
+              <hr>
+              <div class="form-group">
+                <label for="nameField">Your Name</label>
+                <input
+                  type="text"
+                  id="nameField"
+                  placeholder="Enter here"
+                  class="form-control"
+                />
+              </div>
+
+              <div class="form-group mt-2">
+                <label for="contactField">Your Contact</label>
+                <input
+                  type="text"
+                  id="contactField"
+                  placeholder="Enter here"
+                  class="form-control"
+                />
+              </div>
+
+              <div class="form-group mt-2">
+                <label for="addressField">Your Address</label>
+                <textarea
+                  id="addressField"
+                  placeholder="Enter here"
+                  class="form-control"
+                  rows="4"
+                ></textarea>
+              </div>
+
+              <div class="form-group mt-3">
+                <label for="">Select your photo</label>
+                <input id="imgField" type="file" class="form-control" />
+              </div>
+
+              <p class="text-secondary my-3">Important Links</p>
+
+              <div class="form-group mt-2">
+                <label for="fbField">Email id </label>
+                <input
+                  type="text"
+                  id="fbField"
+                  placeholder="Enter here"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group mt-2">
+                <label for="instaField">Instagram </label>
+                <input
+                  type="text"
+                  id="instaField"
+                  placeholder="Enter here"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group mt-2">
+                <label for="linkedField">LinkedIn</label>
+                <input
+                  type="text"
+                  id="linkedField"
+                  placeholder="Enter here"
+                  class="form-control"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <!-- second col -->
+              <h1>Professional Information</h1>
+              <hr>
+              <div class="form-group mt-2">
+                <label for="">Objective</label>
+                <textarea
+                  id="objectiveField"
+                  rows="5"
+                  placeholder="Enter here"
+                  class="form-control"
+                ></textarea>
+              </div>
+
+              <div class="form-group mt-2" id="we">
+                <label for="">Work Experience</label>
+                <textarea
+                  placeholder="Enter here"
+                  class="form-control weField"
+                  rows="3"
+                ></textarea>
+
+                <!-- new textarea -->
+
+                <div class="container text-center mt-2" id="weAddButton">
+                  <button
+                    onclick="addNewWEField()"
+                    class="btn btn-primary btn-sm"
+                  >
+                    Add
+                  </button>
+                </div>
+              </div>
+
+              <div class="form-group mt-2" id="aq">
+                <label for="">Academic Qualification</label>
+                <textarea
+                  placeholder="Enter here"
+                  class="form-control eqField"
+                  rows="3"
+                ></textarea>
+
+                <div class="container text-center mt-2" id="aqAddButton">
+                  <button
+                    onclick="addNewAQField()"
+                    class="btn btn-primary btn-sm"
+                  >
+                    Add
+                  </button>
+                </div>  
+              </div>
+              <div class="form-group mt-2" id="cr">
+                <label for="">Certifications</label>
+                <textarea
+                  placeholder="Enter here"
+                  class="form-control crField"
+                  rows="3"
+                ></textarea>
+
+                <div class="container text-center mt-2" id="crAddButton">
+                  <button
+                    onclick="addNewCRField()"
+                    class="btn btn-primary btn-sm"
+                  >
+                    Add
+                  </button>
+                </div>  
+              </div>
+            </div>
+          </div>
+
+          <div class="container text-center mt-3">
+            <button onclick="generateCV()" class="btn btn-primary btn-lg">
+              Generate CV
+            </button>
+          </div>
+        </div>
+      </div class="card-body">
+    </div>
+    <!-- cv template -->
+    
+   
+
+    <div class="container" id="cv-template2"  style=width:100%;>
+      <div class="row">
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <table style="width:100%"> 
+          <tr>
+            <td width="150px" valign=top   class="background1">
+              <div class="col-md-12 text-center"  >
+                <!-- first col  -->
+
+                <img
+                  src="https://retailx.com/wp-content/uploads/2019/12/iStock-476085198.jpg"
+                  alt=""
+                  class="img-fluid myimg"
+                  id="imgTemplate"
+                />
+                <hr style="height:4px; color:black;">
+
+                <div class="container ">
+                  <div class="card-header background2">
+                    <h3>info</h3>
+                  </div>
+                  <p id="nameT1" >Aman Kumar Tiwari</p>
+                  <p id="contactT" >+914542454541,+9154564154</p>
+                  <p id="addressT" >563563/4524152 Sector 35 Noida , INDIA</p>
+
+                  <hr style="height:4px solid:black ;">
+                  <div class="card-header background2" id="Cinfo">
+                    <h3 >Contact</h3>
+                  </div>
+                  <p>
+                    <a id="fbT" href="#1" style="font-size:20px"
+                      >https://www.facebook.com/LearnCodeWithDurgesh</a
+                    >
+                  </p>
+                  <p>
+                    <a id="instaT" href="#1" style="font-size:20px" >https://www.instagram.com/Durgesh_k_t</a>
+                  </p>
+                  <p>
+                    <a id="linkedT" href="#1"
+                    style="font-size:20px" >https://www.linkedin.com/LearnCodeWithDurgesh</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </td>
+            <td class=" background2" >
+              <div class=" col-md-12" >
+                <!-- second col  -->
+                <b>
+                  <h1 id="nameT2" class="text-center" style="font-size:50px">
+                    Aman Kumar Tiwari
+                  </h1>
+                </b>
+
+                <!-- objective card  -->
+
+                <div class="card mt-4">
+                  <div class="card-header background1">
+                    <h3>Objective</h3>
+                  </div>
+                  <div class="card-body">
+                    <p id="objectiveT" style="font-size:20px">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
+                      quam quos totam dolorem commodi earum, labore consectetur
+                      excepturi reiciendis, a fugiat porro rem mollitia inventore
+                      eligendi, saepe libero hic aliquam? Iure molestias natus dolore
+                      animi, possimus eius! Atque nesciunt eveniet exercitationem enim
+                      nisi quis. Consequatur aliquam reiciendis officiis laboriosam
+                      numquam?
+                    </p>
+                  </div>
+                </div>
+
+                <!-- work Experience -->
+
+                <div class="card mt-4">
+                  <div class="card-header background1">
+                    <h3>Work Experience</h3>
+                  </div>
+                  <div class="card-body">
+                    <ul id="weT" style="font-size:20px">
+                      <li>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Odit, ad.
+                      </li>
+                      <li>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Odit, ad.
+                      </li>
+                      <li>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Odit, ad.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- academic Qualification  -->
+
+                <div class="card mt-4">
+                  <div class="card-header background1">
+                    <h3>Academic Qualification</h3>
+                  </div>
+                  <div class="card-body">
+                    <ul id="aqT" style="font-size:20px">
+                      <li>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Odit, ad.
+                      </li>
+                      <li>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Odit, ad.
+                      </li>
+                      <li>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Odit, ad.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Certifications  -->
+
+                <div class="card mt-4">
+                  <div class="card-header background1">
+                    <h3>Certifications</h3>
+                  </div>
+                  <div class="card-body">
+                    <ul id="crT" style="font-size:20px">
+                      <li>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Odit, ad.
+                      </li>
+                      <li>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Odit, ad.
+                      </li>
+                      <li>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Odit, ad.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+
+              </div>
+            </td>  
+          </tr>    
+        </table> 
+        <hr />
+        <div class="container mt-3 text-center;" >
+          <button onclick="printCV()" class="button" >Print CV</button>
+        </div> 
+        
+  
+        </div>  
+      </div>
+    </div>
+  
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
